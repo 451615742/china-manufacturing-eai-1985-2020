@@ -1,0 +1,32 @@
+industry_code,sub_industry_code,category,name_en,name_zh
+C,13,Manufacturing,Processing of food from agricultural products,农副食品加工业
+C,14,Manufacturing,Manufacture of foods,食品制造业
+C,15,Manufacturing,Manufacture of wine, drinks and refined tea,酒、饮料和精制茶制造业
+C,16,Manufacturing,Manufacture of tobacco,烟草制品业
+C,17,Manufacturing,Manufacture of textiles,纺织业
+C,18,Manufacturing,Manufacture of textile, apparel and accessories,纺织服装、服饰业
+C,19,Manufacturing,Manufacture of leather, fur, feather and related products and footwear,皮革、毛皮、羽毛及其制品和制鞋业
+C,20,Manufacturing,Processing of timber and manufacture of wood, bamboo, rattan, palm and straw products,木材加工和木、竹、藤、棕、草制品业
+C,21,Manufacturing,Manufacture of furniture,家具制造业
+C,22,Manufacturing,Manufacture of paper and paper products,造纸和纸制品业
+C,23,Manufacturing,Printing and reproduction of recording media,印刷和记录媒介复制业
+C,24,Manufacturing,Manufacture of articles for culture, education, arts and crafts, sport and entertainment,文教、工美、体育和娱乐用品制造业
+C,25,Manufacturing,Processing of petroleum, coal and other fuels,石油、煤炭及其他燃料加工业
+C,26,Manufacturing,Manufacture of raw chemical materials and chemical products,化学原料和化学制品制造业
+C,27,Manufacturing,Manufacture of medicines,医药制造业
+C,28,Manufacturing,Manufacture of chemical fibres,化学纤维制造业
+C,29,Manufacturing,Manufacture of rubber and plastics,橡胶和塑料制品业
+C,30,Manufacturing,Manufacture of non-metallic mineral products,非金属矿物制品业
+C,31,Manufacturing,Smelting and pressing of ferrous metals,黑色金属冶炼和压延加工业
+C,32,Manufacturing,Smelting and pressing of non-ferrous metals,有色金属冶炼和压延加工业
+C,33,Manufacturing,Manufacture of fabricated metal products,金属制品业
+C,34,Manufacturing,Manufacture of general-purpose machinery,通用设备制造业
+C,35,Manufacturing,Manufacture of special-purpose machinery,专用设备制造业
+C,36,Manufacturing,Manufacture of automobiles,汽车制造业
+C,37,Manufacturing,Manufacture of railway, ship, aerospace and other transport equipment,铁路、船舶、航空航天和其他运输设备制造业
+C,38,Manufacturing,Manufacture of electrical machinery and apparatus,电气机械和器材制造业
+C,39,Manufacturing,Manufacture of computers, communication and other electronic equipment,计算机、通信和其他电子设备制造业
+C,40,Manufacturing,Manufacture of measuring instruments,仪器仪表制造业
+C,41,Manufacturing,Other manufacturing,其他制造业
+C,42,Manufacturing,Comprehensive utilization of waste resources,废弃资源综合利用业
+C,43,Manufacturing,Repair of fabricated metal products, machinery and equipment,金属制品、机械和设备修理业

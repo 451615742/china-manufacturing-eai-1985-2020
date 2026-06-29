@@ -1,0 +1,18 @@
+# EAI Dataset Processing Pipeline — Python dependencies
+# Core geospatial processing
+geopandas>=0.14.0
+rasterio>=1.3.0
+
+# Numerical processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# Optional: for running step4 spatial join without ArcGIS Pro
+# Uncomment the line below to use the open-source alternative
+# geopandas>=0.14.0  (already listed above)
+
+# Note: step4_spatial_join.py requires ArcGIS Pro with the arcpy package
+# (proprietary, not installable via pip). An alternative implementation using
+# geopandas.sjoin is provided as step4_spatial_join_opensource.py.
