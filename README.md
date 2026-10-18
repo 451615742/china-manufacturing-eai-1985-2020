@@ -27,5 +27,4 @@ controlled or third-party materials and are not redistributed.
 
 ## Citation and licence
 
-Please cite the associated dataset and manuscript. The code is intended for
-release under the MIT License after the repository owner confirms the licence.
+Please cite the associated dataset and manuscript. This code is released under the MIT License.
