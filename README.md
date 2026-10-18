@@ -27,4 +27,8 @@ controlled or third-party materials and are not redistributed.
 
 ## Citation and licence
 
-Please cite the associated dataset and manuscript. This code is released under the MIT License.
+Please cite the associated dataset and manuscript.
+
+Wang, Z., Liu, W., Zhou, Y., Wang, S., Wang, F. & Wang, L. A 1-km gridded manufacturing Economic Activity Intensity (EAI) dataset for mainland China (1985-2020). Figshare (2026). https://doi.org/10.6084/m9.figshare.32824460
+
+This code is released under the MIT License.
