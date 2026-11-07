@@ -12,6 +12,18 @@ def is_manufacturing(code):
         return False
 
 
+def target_year_mask(founded, approved, status, year):
+    """Apply the three alternative temporal inclusion rules."""
+    founded = pd.to_numeric(founded, errors="coerce")
+    approved = pd.to_numeric(approved, errors="coerce")
+    surviving = status.astype("string").str.strip().eq("存续").fillna(False)
+    registered_this_year = founded.eq(year)
+    registered_earlier = founded.lt(year)
+    approved_in_or_after_year = registered_earlier & approved.ge(year)
+    approved_earlier_and_surviving = registered_earlier & approved.lt(year) & surviving
+    return registered_this_year | approved_in_or_after_year | approved_earlier_and_surviving
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True)
@@ -20,17 +32,18 @@ def main():
     parser.add_argument("--industry-column", default="industry_code")
     parser.add_argument("--establishment-column", default="establishment_year")
     parser.add_argument("--approval-column", default="approval_year")
-    parser.add_argument("--status-column", default="registration_status")
+    parser.add_argument("--status-column", default="registration_status",
+                        help="Registration status field; 存续 denotes a surviving enterprise.")
     args = parser.parse_args()
     target = Path(args.output)
     target.mkdir(parents=True, exist_ok=True)
     for path in sorted(Path(args.input).glob("*.csv")):
         frame = pd.read_csv(path)
         frame = frame[frame[args.industry_column].map(is_manufacturing)]
-        founded = pd.to_numeric(frame[args.establishment_column], errors="coerce")
-        approved = pd.to_numeric(frame[args.approval_column], errors="coerce")
-        active = (founded <= args.year) & (approved.isna() | (approved >= args.year))
-        frame[active].to_csv(target / path.name, index=False)
+        eligible = target_year_mask(frame[args.establishment_column],
+                                    frame[args.approval_column],
+                                    frame[args.status_column], args.year)
+        frame.loc[eligible].to_csv(target / path.name, index=False)
 
 
 if __name__ == "__main__":

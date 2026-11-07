@@ -11,6 +11,19 @@ dataset while updating the implementation to the final release parameters.
 4. `step4_spatial_join.py` and `step4_spatial_join_opensource.py` aggregate geocoded points to the 1-km grid.
 5. `step5_eai_synthesis.py` applies Gaussian smoothing and constructs the EAI raster.
 
+### Target-year enterprise screening
+
+For manufacturing codes 13–42, Step 3 retains a record if the enterprise:
+
+1. was registered in the target year;
+2. was registered earlier and has an approval year equal to or later than the target year; or
+3. was registered and approved before the target year and has registration status `存续` (surviving).
+
+The script expects numeric registration and approval years in `establishment_year`
+and `approval_year`, and the source status in `registration_status` by default.
+Use the corresponding command-line options to specify other column names.
+A missing approval year does not qualify an earlier registration under rules 2 or 3.
+
 ## Final parameters
 
 - Grid: 1,000 m × 1,000 m
